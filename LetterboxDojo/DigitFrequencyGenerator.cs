@@ -7,7 +7,12 @@ namespace LetterboxDojo
         public static int[] digitFrequency(int startNumber, int endNumber)
         {
             var array = new int[10];
-            array[1] = 1;
+
+            for (int i = startNumber; i <= endNumber; i++)
+            {
+                array[i%10] = 1;
+            }
+
             return array;
         }
     }
