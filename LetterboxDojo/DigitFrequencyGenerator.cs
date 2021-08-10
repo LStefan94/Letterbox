@@ -10,9 +10,12 @@ namespace LetterboxDojo
 
             for (int i = startNumber; i <= endNumber; i++)
             {
-                array[i%10] = 1;
+                for (int k = i; k > 0; k/=10)
+                {
+                    array[k%10] += 1;
+                }
             }
-
+            
             return array;
         }
     }
