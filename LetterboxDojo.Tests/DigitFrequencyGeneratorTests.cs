@@ -13,11 +13,17 @@ namespace LetterboxDojo.Tests
         }
         
         [Fact]
-        public void SimpleTestCase() 
+        public void OneToOneTestCase() 
         {
             int[] actual = DigitFrequencyGenerator.digitFrequency(1,1);
             Assert.Equal(new int[] {0,1,0,0,0,0,0,0,0,0}, actual);
         }
 
+        [Fact]
+        public void ZeroToZeroTestCase()
+        {
+            int[] actual = DigitFrequencyGenerator.digitFrequency(0, 0);
+            Assert.Equal(new int[] { 1, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, actual);
+        }
     }
 }
